@@ -1,0 +1,62 @@
+2022-09-19 06:13:17,726 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 1 hosts
+2022-09-19 06:13:17,956 - nornir.core.task -    ERROR -      start() - Host 'csr2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: No matching key exchange found for host, their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+
+2022-09-19 06:18:48,496 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 1 hosts
+2022-09-19 06:18:48,730 - nornir.core.task -    ERROR -      start() - Host 'csr2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/rubendedman/PycharmProjects/cisco-bgp-peering/venv/lib/python3.9/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: No matching key exchange found for host, their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+
